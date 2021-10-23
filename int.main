@@ -1,0 +1,26 @@
+#include <cstdlib> 
+#include <ctime> 
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main() 
+{ 
+    srand((unsigned)time(0)); 
+    ifstream f("nr.in");
+    int i,mini,maxi,g;
+    f>>maxi>>mini;
+    i = (rand()%maxi)+mini;
+    cout<<"Ma gandesc la un numar cuprins intre "<<mini<<" si "<<maxi<<". Poti sa-l ghicesti?"<<endl;
+    cin>>g;
+    while(g!=i)
+    {
+        if(g>i)
+            cout<<"Numarul este prea mare, mai incearca"<<endl;
+        else
+            cout<<"Numarul este prea mic, mai incearca"<<endl;
+        cin>>g;
+    }
+    cout <<"Felicitari, numarul corect este "<<i<<endl; 
+}
