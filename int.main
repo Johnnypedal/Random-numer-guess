@@ -12,15 +12,15 @@ int main()
     int i,mini,maxi,g;
     f>>maxi>>mini;
     i = (rand()%maxi)+mini;
-    cout<<"Ma gandesc la un numar cuprins intre "<<mini<<" si "<<maxi<<". Poti sa-l ghicesti?"<<endl;
+    cout<<"I am thinking of a number between "<<mini<<" and "<<maxi<<". Can you guess?"<<endl;
     cin>>g;
     while(g!=i)
     {
         if(g>i)
-            cout<<"Numarul este prea mare, mai incearca"<<endl;
+            cout<<"Your number is too big, try agaiin"<<endl;
         else
-            cout<<"Numarul este prea mic, mai incearca"<<endl;
+            cout<<"Your number is too small, try agaiin"<<endl;
         cin>>g;
     }
-    cout <<"Felicitari, numarul corect este "<<i<<endl; 
+    cout <<"Congratulatinone, the secret number was "<<i<<endl; 
 }
